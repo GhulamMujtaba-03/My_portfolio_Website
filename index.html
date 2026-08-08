@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mobile responsiveness ke liye meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Website ka browser tab title -->
+    <title>Portfolio | Data Analyst & Power Bi  & SQL</title>
+
+    <!-- Font Awesome Icons CDN (Navbar aur Social links ke icons ke liye) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tumhari CSS file link (style.css) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         PAGE LOADER (Jab tak page load hoga ye spinner dikhega)
+         ========================================================================== -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- ==========================================================================
+         BACKGROUND CANVAS & MOUSE GLOW (Interactive visual effects)
+         ========================================================================== -->
+    <canvas id="particleCanvas"></canvas>
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+
+    <!-- ==========================================================================
+         NAVIGATION BAR (Header section with smooth blur background)
+         ========================================================================== -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <!-- YAHAN APNA LOGO YA NAME LIKHO -->
+            <a href="#hero" class="nav-logo">Ghulam <span>Mujtaba</span></a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- ==========================================================================
+         HERO SECTION (Top intro banner with profile picture)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+        
+        <!-- PROFILE PICTURE CONTAINER -->
+        <div class="profile-glow-wrapper">
+            <!-- YAHAN APNI PROFILE PIC KA PATH/NAME DHALO (e.g., assets/my-photo.jpg) -->
+            <img src="Profile_Pic.jpg" alt="Ghulam Mujtaba Profile Picture" class="profile-img">
+        </div>
+
+        <!-- Status Badge -->
+        <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>AVAILABLE FOR OPPORTUNITIES</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Ghulam Mujtaba</span>
+        </h1>
+
+        <!-- Subtitle with Typing Animation target -->
+        <p class="hero-subtitle">
+            <span id="typingText">Data Analyst | Power BI &  SQL & MySQL </span><span class="cursor">|</span>
+        </p>
+
+        <!-- Call To Action Buttons -->
+        <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+                View My Work <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- YAHAN APNE RESUME/CV PDF FILE KA PATH/NAME DHALO (e.g., assets/my-resume.pdf) -->
+            <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary">
+                Download CV <i class="fa-solid fa-download"></i>
+            </a>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </a>
+    </section>
+
+
+    <!-- ==========================================================================
+         ABOUT SECTION (Overview & key highlights)
+         ========================================================================== -->
+    <section class="section-padding" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">GET TO KNOW ME</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+
+            <div class="about-grid">
+                <!-- About Box 1 -->
+                <div class="glass-card about-card highlight-card">
+                    <i class="fa-solid fa-chart-pie card-icon"></i>
+                    <h3>Data Analytics Focus</h3>
+                    <p>Passionate about turning raw data into actionable insights using SQL, Python (Pandas), and Power BI interactive dashboards.</p>
+                </div>
+
+                <!-- About Box 2 -->
+                <div class="glass-card about-card">
+                    <i class="fa-solid fa-robot card-icon"></i>
+                    <h3>Data Modeling & ETL</h3>
+                    <p>Structuring raw datasets into clean relational models, creating star schemas, and writing efficient scripts to build data warehouses.</p>
+                </div>
+
+                <!-- About Box 3 -->
+                <div class="glass-card about-card">
+                    <i class="fa-solid fa-bullseye card-icon"></i>
+                    <h3>Problem Solver</h3>
+                    <p>ocusing on end-to-end analytical solutions, clean data models, and strategic visual storytelling for business growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SKILLS SECTION (Tech stack grid)
+         ========================================================================== -->
+    <section class="section-padding" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">MY TOOLKIT</span>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="glass-card skill-card">
+                    <i class="fa-solid fa-chart-simple skill-icon"></i>
+                    <h3>Power BI</h3>
+                </div>
+                <!-- Skill 2 -->
+                <div class="glass-card skill-card">
+                    <i class="fa-solid fa-database skill-icon"></i>
+                    <h3>MySQL</h3>
+                </div>
+                <!-- Skill 3 -->
+                <div class="glass-card skill-card">
+                    <i class="fa-brands fa-python skill-icon"></i>
+                    <h3>Python</h3>	
+                </div>
+		<!-- Skill: Pandas (Separate Box) -->
+<div class="glass-card skill-card">
+    <i class="fa-solid fa-table-cells skill-icon" style="color: #36b8ff;"></i>
+    <h3>Pandas</h3>
+</div>
+
+<!-- Skill: NumPy (Separate Box) -->
+<div class="glass-card skill-card">
+    <i class="fa-solid fa-calculator skill-icon" style="color: #36b8ff;"></i>
+    <h3>NumPy</h3>
+</div>
+
+                <!-- Skill 4 -->
+                <div class="glass-card skill-card">
+                    <i class="fa-solid fa-file-excel skill-icon"></i>
+                    <h3>Advanced Excel</h3>
+                </div>
+        <!-- Skill 6: Git -->
+<div class="glass-card skill-card">
+    <i class="fa-brands fa-git-alt skill-icon"></i>
+    <h3>Git</h3>
+</div>
+
+<!-- Skill 7: GitHub (Separate Box) -->
+<div class="glass-card skill-card">
+    <i class="fa-brands fa-github skill-icon"></i>
+    <h3>GitHub</h3>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         PROJECTS SECTION (Projects with auto-fit image frames)
+         ========================================================================== -->
+    <section class="section-padding" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">PORTFOLIO</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- --------------------------------------------------------------
+                     PROJECT CARD 1
+                     -------------------------------------------------------------- -->
+                <div class="glass-card project-card">
+                    <!-- Project Image Frame -->
+                    <div class="project-img-wrapper">
+                        <!-- YAHAN PROJECT 1 KI IMAGE KA NAME/PATH DHALO (e.g., assets/project1.png) -->
+                        <img src="Car_Sales2.jpeg" alt="Sales Data Dashboard Preview" class="project-img">
+                    </div>
+
+                    <div class="project-content">
+                        <!-- YAHAN PROJECT 1 KA TITLE DHALO -->
+                        <h3>Car Sales & Inventory Dashboard</h3>
+                        
+                        <!-- YAHAN PROJECT 1 KI DESCRIPTION DHALO -->
+                        <p>Developed a car sales and inventory dashboard to monitor vehicle sales, inventory levels, brands, models, pricing, and dealership performance. Provided interactive insights into sales trends and inventory distribution.
+</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">Dashboard</span>
+                        </div>
+
+                        <div class="project-links">
+                            <!-- YAHAN PROJECT 1 KA GITHUB REPO LINK DHALO -->
+                            <a href="https://github.com/GhulamMujtaba-03/Car_Sales_Analysis_PowerBI_P7" target="_blank" class="btn btn-secondary btn-sm">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                            <!-- YAHAN PROJECT 1 KA LIVE DEMO YA PDF LINK DHALO -->
+                            <a href="Car_Sales.pdf" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- --------------------------------------------------------------
+                     PROJECT CARD 2
+                     -------------------------------------------------------------- -->
+                <div class="glass-card project-card">
+                    <div class="project-img-wrapper">
+                        <!-- YAHAN PROJECT 2 KI IMAGE KA NAME/PATH DHALO -->
+                        <img src="pizza_sales2.jpeg" alt="Customer Churn Analysis Preview" class="project-img">
+                    </div>
+
+                    <div class="project-content">
+                        <!-- YAHAN PROJECT 2 KA TITLE DHALO -->
+                        <h3>Pizza Shop Sales Report</h3>
+                        
+                        <!-- YAHAN PROJECT 2 KI DESCRIPTION DHALO -->
+                        <p>Analyzed pizza shop sales data to understand revenue, order volume, popular pizza categories, and customer ordering patterns. Developed a dashboard to highlight top-selling products and identify daily, monthly, and category-level sales trends.
+</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">PowerBI</span>
+                            <span class="tag">DashBoard</span>
+                            <span class="tag">DAX</span>
+                        </div>
+
+                        <div class="project-links">
+                            <!-- YAHAN PROJECT 2 KA GITHUB LINK DHALO -->
+                            <a href="
+https://github.com/GhulamMujtaba-03/Pizza_Sales_Analysis_PowerBI_P8" target="_blank" class="btn btn-secondary btn-sm">
+                                <i class="fa-brands fa-github"></i> Github
+                            </a>
+                            <!-- YAHAN PROJECT 2 KA DEMO LINK DHALO -->
+                            <a href="Pizza_Sales.pdf" target="_bladsdfsdf" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- --------------------------------------------------------------
+                     PROJECT CARD 3
+                     -------------------------------------------------------------- -->
+                <div class="glass-card project-card">
+                    <div class="project-img-wrapper">
+                        <!-- YAHAN PROJECT 3 KI IMAGE KA NAME/PATH DHALO -->
+                        <img src="Meta_ads.jpeg" alt="AI Automation Workflow Preview" class="project-img">
+                    </div>
+
+                    <div class="project-content">
+                        <!-- YAHAN PROJECT 3 KA TITLE DHALO -->
+                        <h3>Facebook & Instagram Ads Performance</h3>
+                        
+                        <!-- YAHAN PROJECT 3 KI DESCRIPTION DHALO -->
+                        <p>Analyzed Facebook and Instagram advertising campaign data to evaluate impressions, clicks, conversions, spending, and overall campaign performance. Created visual insights to compare campaigns and understand advertising effectiveness.
+</p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">PowerBI</span>
+                            <span class="tag">DashBoard</span>
+                            <span class="tag">DAX</span>
+                        </div>
+
+                        <div class="project-links">
+                            <!-- YAHAN PROJECT 3 KA GITHUB LINK DHALO -->
+                            <a href="https://github.com/GhulamMujtaba-03/Meta-Ads_Performance_Analysis_PowerBi_p6" target="_blank" class="btn btn-secondary btn-sm">
+                                <i class="fa-brands fa-github"></i> Github
+                            </a>
+			                            </a>
+                            <!-- YAHAN PROJECT 2 KA DEMO LINK DHALO -->
+                            <a href="Meta-Ads-Powerbi.pdf" target="_bladsdfsdf" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+		<div class="glass-card project-card">
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 4
+                     -------------------------------------------------------------- -->
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="Ipl.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Excel IPL Cricket Match Analysis</h3>
+        <p>Analyzed IPL cricket match data using Excel to evaluate team performance, match results, player statistics, wins, losses, and season trends. Built an interactive dashboard to compare teams and provide clear tournament insights.
+</p>
+        <div class="tech-tags">
+            <span class="tag">Excel</span>
+             <span class="tag">Pivot Tables</span>
+            <span class="tag">DashBoard</span>
+            <span class="tag">Power Query</span>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/Excel-IPL-Analysis-Dashboard_P12" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://example.com" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>  PDF
+            </a>
+        </div>
+    </div>
+</div>
+
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 5
+                     -------------------------------------------------------------- -->
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="e-commerce2.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Excel E-Commerce Sales Analysis</h3>
+        <p>Performed e-commerce sales analysis using Microsoft Excel to evaluate revenue, orders, product performance, and customer trends. Created an interactive dashboard with KPIs, charts, filters, and business-focused insights.
+</p>
+        <div class="tech-tags">
+            <span class="tag">Excel</span>
+             <span class="tag">Pivot Tables</span>
+            <span class="tag">DashBoard</span>
+            <span class="tag">Power Query</span>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/Excel-Ecommerce-Sales-Analysis-Excel-Dashboard_P11
+" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://example.com" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+        </div>
+    </div>
+</div>
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 6
+                     -------------------------------------------------------------- -->
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="e-commerce1.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Employee Attrition & HR Capstone Project</h3>
+        <p>Developed an HR analytics dashboard to analyze employee attrition, demographics, job roles, salaries, and department-level trends. Identified key factors associated with employee turnover to support better workforce decisions.
+</p>
+        <div class="tech-tags">
+    <span class="tag">Power BI</span>
+    <span class="tag">DAX</span>
+    <span class="tag">SQL</span>
+    <span class="tag">Excel</span>
+    <span class="tag">Dashboard</span>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/HR_Analysis_Power_Bi_SQl_Excel_Dashboard_p5" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="Hr_Pdf.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+        </div>
+    </div>
+</div>
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 7
+                     -------------------------------------------------------------- -->
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="e-commerce.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Brazil E-Commerce Analytics</h3>
+        <p>Performed an in-depth analysis of Brazilian e-commerce data to understand customer behavior, sales trends, order performance, and delivery patterns. Created visual insights to evaluate business performance across different regions and categories.</p>
+        <div class="tech-tags">
+    <span class="tag">Power BI</span>
+    <span class="tag">DAX</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">Dashboard</span>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/Olist-Brazilian_E-Commerce_Data-Analysis_Pandas_PowerBI_p3
+" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="Brazil_Pdf.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> PDF
+            </a>
+        </div>
+    </div>
+</div>
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 8
+                     -------------------------------------------------------------- -->
+
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="Vegetable_project1.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Swiggy Food Delivery Warehouse</h3>
+        <p>Designed and analyzed a food delivery warehouse dataset using SQL to explore restaurants, orders, customers, dishes, pricing, and sales performance. Applied SQL queries for data exploration, filtering, aggregation, and business insights.
+</p>
+        <div class="tech-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Quries</span>
+	    <span class="tag">Data Analysis</span>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/Swiggy_Data_Warehouse_Using_MySQL_SQL_P09" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="SWIGGY.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pdf Demo
+            </a>
+        </div>
+    </div>
+</div>
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 9
+                     -------------------------------------------------------------- -->
+
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="Vegetable_Project.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Blinkit Grocery Sales Analysis</h3>
+        <p>Analyzed Blinkit grocery sales data to understand outlet performance, product categories, item visibility, ratings, and sales trends. Created an interactive dashboard to compare outlets and identify key factors influencing grocery sales.
+</p>
+        <div class="tech-tags">
+    <span class="tag">SQL</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">Queries</span>
+    <span class="tag">Data Analysis</span>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/Blinkit_Sales_Analysis_using-MySQL_SQL_P10" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="Blinkit.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pdf Demo
+            </a>
+        </div>
+    </div>
+</div>
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 10
+                     -------------------------------------------------------------- -->
+
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="e-commerce3.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Farmer Market Sales Tracker</h3>
+        <p>Built a sales tracking dashboard for farmer market data to monitor product sales, revenue, quantities, customer activity, and overall performance. Used interactive visualizations to identify high-performing products and sales trends.
+</p>
+        <div class="tech-tags">
+                            <span class="tag">PowerBI</span>
+                            <span class="tag">DashBoard</span>
+                            <span class="tag">DAX</span>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/Farmer_Market_Dashboard_Power_Bi_p2 " target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="Farmer_Market_PDF.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pdf Demo
+            </a>
+        </div>
+    </div>
+</div>
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 11
+                     -------------------------------------------------------------- -->
+
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="Hr_Project.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>E-Commerce Sales Dashboard</h3>
+        <p>Analyzed global e-commerce sales data to track revenue, profit, orders, customers, and product performance. Built an interactive dashboard to identify sales trends, top-performing products, and regional business insights.
+</p>
+        <div class="tech-tags">
+                            <span class="tag">PowerBI</span>
+                            <span class="tag">DashBoard</span>
+                            <span class="tag">DAX</span>>
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/E-Commerce_Data-Analysis_Pandas_PowerBI_p4" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="E-commerce_Pdf.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pdf Demo
+            </a>
+        </div>
+    </div>
+</div>
+
+
+      <!-- --------------------------------------------------------------
+                     PROJECT CARD 12
+                     -------------------------------------------------------------- -->
+<div class="glass-card project-card">
+    <div class="project-img-wrapper">
+        <!-- CHANGE IMAGE HERE -->
+        <img src="Credit_Card.jpeg" alt="Project Title" class="project-img">
+    </div>
+    <div class="project-content">
+        <h3>Credit Card Transaction Report</h3>
+        <p>Analyzed credit card transaction data to evaluate revenue, transaction volume, customer activity, spending patterns, and transaction trends. Built an interactive report to provide a clear overview of financial performance and customer behavior.
+</p>
+        <div class="tech-tags">
+                      <span class="tag">PowerBI</span>
+                      <span class="tag">DashBoard</span>
+                       <span class="tag">DAX</span
+        </div>
+        <div class="project-links">
+            <!-- CHANGE GITHUB LINK HERE -->
+            <a href="https://github.com/GhulamMujtaba-03/Credit-Card-Analytics-PowerBI_P13" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="Credit_Card.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Pdf
+            </a>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+    </section>
+
+
+    <!-- ==========================================================================
+         CERTIFICATES SECTION (Certificates with auto-fit image frames & PDF links)
+         ========================================================================== -->
+    <section class="section-padding" id="certificates">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">ACCOMPLISHMENTS</span>
+                <h2 class="section-title">Certifications</h2>
+            </div>
+
+            <div class="certificates-grid">
+
+                <!-- --------------------------------------------------------------
+                     CERTIFICATE CARD 1
+                     -------------------------------------------------------------- -->
+                <div class="glass-card certificate-card">
+                    <!-- Certificate Image Frame (Auto-Fit without cropping) -->
+                    <div class="cert-img-wrapper">
+                        <!-- YAHAN CERTIFICATE 1 KI IMAGE KA NAME/PATH DHALO (e.g., assets/cert-powerbi.jpg) -->
+                        <img src="Excel_Certificate.jpg" alt="Excel Certificate Preview" class="cert-img">
+                    </div>
+
+                    <div class="cert-content">
+                        <!-- YAHAN CERTIFICATE 1 KA TITLE DHALO -->
+                        <h3>Business Analytics with Excel</h3>
+                        
+                        <!-- YAHAN ISSUER (COMPANY/PLATFORM NAME) DHALO -->
+                        <p class="cert-issuer">
+                            <i class="fa-solid fa-award"></i> Simplilearn
+                        </p>
+                        
+                        <!-- YAHAN COMPLETION DATE DHALO -->
+                        <p class="cert-date">
+                            <i class="fa-regular fa-calendar-check"></i> Completed: 06th September 2025
+                        </p>
+
+                        <div class="cert-actions">
+                            <!-- YAHAN CERTIFICATE 1 KI PDF FILE KA LINK/NAME DHALO (e.g., assets/powerbi-cert.pdf) -->
+                            <a href="Excel_Certificate.pdf" target="_blank" class="btn btn-primary btn-sm btn-full">
+                                <i class="fa-solid fa-file-pdf"></i> View Certificate PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- --------------------------------------------------------------
+                     CERTIFICATE CARD 2
+                     -------------------------------------------------------------- -->
+                <div class="glass-card certificate-card">
+                    <div class="cert-img-wrapper">
+                        <!-- YAHAN CERTIFICATE 2 KI IMAGE KA NAME/PATH DHALO -->
+                        <img src="Power_BI_Certificate.jpg" alt="Power_BI_Certificate " class="cert-img">
+                    </div>
+
+                    <div class="cert-content">
+                        <!-- YAHAN CERTIFICATE 2 KA TITLE DHALO -->
+                        <h3>Power BI</h3>
+                        
+                        <!-- YAHAN ISSUER DHALO -->
+                        <p class="cert-issuer">
+                            <i class="fa-solid fa-award"></i> Simplilearn
+                        </p>
+                        
+                        <!-- YAHAN DATE DHALO -->
+                        <p class="cert-date">
+                            <i class="fa-regular fa-calendar-check"></i> 28th November 2025
+                        </p>
+
+                        <div class="cert-actions">
+                            <!-- YAHAN CERTIFICATE 2 KI PDF FILE KA LINK DHALO -->
+                            <a href="Power_Bi_Certificate.pdf" target="_blank" class="btn btn-primary btn-sm btn-full">
+                                <i class="fa-solid fa-file-pdf"></i> View Certificate PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+		                <!-- --------------------------------------------------------------
+                     CERTIFICATE CARD 3
+                     -------------------------------------------------------------- -->
+                <div class="glass-card certificate-card">
+                    <!-- Certificate Image Frame (Auto-Fit without cropping) -->
+                    <div class="cert-img-wrapper">
+                        <!-- YAHAN CERTIFICATE 1 KI IMAGE KA NAME/PATH DHALO (e.g., assets/cert-powerbi.jpg) -->
+                        <img src="SQL_Certificate.jpg" alt="Power BI Certificate Preview" class="cert-img">
+                    </div>
+
+                    <div class="cert-content">
+                        <!-- YAHAN CERTIFICATE 1 KA TITLE DHALO -->
+                        <h3>SQL for Data Analysis</h3>
+                        
+                        <!-- YAHAN ISSUER (COMPANY/PLATFORM NAME) DHALO -->
+                        <p class="cert-issuer">
+                            <i class="fa-solid fa-award"></i> Simplilearn
+                        </p>
+                        
+                        <!-- YAHAN COMPLETION DATE DHALO -->
+                        <p class="cert-date">
+                            <i class="fa-regular fa-calendar-check"></i> Completed: 21th December 2025
+                        </p>
+
+                        <div class="cert-actions">
+                            <!-- YAHAN CERTIFICATE 1 KI PDF FILE KA LINK/NAME DHALO (e.g., assets/powerbi-cert.pdf) -->
+                            <a href="SQL_Certificate.pdf" target="_blank" class="btn btn-primary btn-sm btn-full">
+                                <i class="fa-solid fa-file-pdf"></i> View Certificate PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+		                <!-- --------------------------------------------------------------
+                     CERTIFICATE CARD 4
+                     -------------------------------------------------------------- -->
+                <div class="glass-card certificate-card">
+                    <!-- Certificate Image Frame (Auto-Fit without cropping) -->
+                    <div class="cert-img-wrapper">
+                        <!-- YAHAN CERTIFICATE 1 KI IMAGE KA NAME/PATH DHALO (e.g., assets/cert-powerbi.jpg) -->
+                        <img src="Python_Certificate.jpg" alt="Power BI Certificate Preview" class="cert-img">
+                    </div>
+
+                    <div class="cert-content">
+                        <!-- YAHAN CERTIFICATE 1 KA TITLE DHALO -->
+                        <h3>Python for Data Analysis</h3>
+                        
+                        <!-- YAHAN ISSUER (COMPANY/PLATFORM NAME) DHALO -->
+                        <p class="cert-issuer">
+                            <i class="fa-solid fa-award"></i> Simplilearn
+                        </p>
+                        
+                        <!-- YAHAN COMPLETION DATE DHALO -->
+                        <p class="cert-date">
+                            <i class="fa-regular fa-calendar-check"></i> Completed: 15th October 2025
+                        </p>
+
+                        <div class="cert-actions">
+                            <!-- YAHAN CERTIFICATE 1 KI PDF FILE KA LINK/NAME DHALO (e.g., assets/powerbi-cert.pdf) -->
+                            <a href="Python_Certificate.pdf" target="_blank" class="btn btn-primary btn-sm btn-full">
+                                <i class="fa-solid fa-file-pdf"></i> View Certificate PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         EXPERIENCE / TIMELINE SECTION
+         ========================================================================== -->
+    <section class="section-padding" id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">MY JOURNEY</span>
+                <h2 class="section-title">Experience & Internships</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <span class="timeline-date">2026 - PRESENT</span>
+                        <h3>Data Analytics & AI Automation</h3>
+                        <p class="timeline-company">Personal & Open Source Projects</p>
+                        <ul>
+                            <li>Designed and published 9+ interactive Power BI dashboards and MySQL repositories on GitHub.</li>
+                            <li>Implemented local automation workflows using Docker Desktop and n8n.</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         CONTACT SECTION (Contact info & message form)
+         ========================================================================== -->
+    <section class="section-padding" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+
+            <div class="glass-card contact-wrapper">
+                <!-- Left Info Side -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out for opportunities, collaborations, or data-related queries!</p>
+
+                    <div class="info-list">
+                        <!-- YAHAN APNA EMAIL ADDRESS UPDATE KARO -->
+                        <a href="mailto:your.email@example.com" class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>ghulammujtabaismailani@gmail.com</span>
+                        </a>
+
+                        <!-- YAHAN APNA LINKEDIN PROFILE URL DHALO -->
+       <a href="https://linkedin.com/in/ghulam-mujtabaa-880233409" target="_blank" class="info-item">
+    <i class="fa-brands fa-linkedin"></i>
+    <span>linkedin.com/in/ghulam-mujtabaa-880233409</span>
+</a>
+
+                        <!-- YAHAN APNA GITHUB PROFILE URL DHALO -->
+                             <a href="https://github.com/GhulamMujtaba-03" target="_blank" class="info-item">
+                                     <i class="fa-brands fa-github"></i>
+                                     <span>github.com/GhulamMujtaba-03</span>
+                           </a>
+<!-- 1. Direct WhatsApp Chat Link -->
+<a href="https://wa.me" target="_blank" class="info-item">
+    <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+    <span>+92 333 0285728</span>
+</a>
+
+<!-- 2. View & Download CV Link -->
+<a href="my-cv.pdf" target="_blank" class="info-item">
+    <i class="fa-solid fa-file-pdf" style="color: #ff4d4d;"></i>
+    <span>View & Download CV</span>
+</a>
+
+
+                    </div>
+                </div>
+
+                <!-- Right Form Side -->
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         FOOTER SECTION
+         ========================================================================== -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2026 Ghulam Mujtaba. All rights reserved.</p>
+
+        <div class="footer-socials">
+            <a href="https://github.com/GhulamMujtaba-03" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/ghulam-mujtabaa-880233409" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:ghulammujtabaismailani@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- ==========================================================================
+         JAVASCRIPT FILE LINK (script.js)
+         ========================================================================== -->
+    <script src="script.js"></script>
+</body>
+</html>
