@@ -695,6 +695,10 @@ a {
     padding: 40px;
 }
 
+.contact-info {
+    text-align: center;
+}
+
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 12px;
@@ -703,17 +707,20 @@ a {
 .contact-info p {
     color: var(--text-secondary);
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .info-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: center;
 }
 
 .info-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 16px;
     color: var(--text-secondary);
     font-size: 0.95rem;
