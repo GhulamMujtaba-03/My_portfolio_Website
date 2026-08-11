@@ -285,25 +285,25 @@ a {
     background-color: #12141d;
 }
 
+/* Portfolio Note - Desktop */
 .portfolio-note {
-    margin: 0 0 18px 0;
-    font-size: 1.05rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: #d8d9ff !important;
+
+    background: none !important;
+    -webkit-text-fill-color: #d8d9ff !important;
+
     text-align: center;
+    letter-spacing: 0.3px;
+    margin: 0 0 18px 0;
+}
 
-    background: linear-gradient(
-        90deg,
-        #c4c7ff,
-        #8b7cff,
-        #c4c7ff
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-
-    opacity: 1;
+/* Mobile */
+@media (max-width: 768px) {
+    .portfolio-note {
+        font-size: 0.95rem !important;
+    }
 }
 
 .hero-badge {
