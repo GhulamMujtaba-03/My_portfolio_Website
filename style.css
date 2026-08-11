@@ -689,55 +689,82 @@ a {
 
 /* Contact Section */
 .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr !important;
-    gap: 40px;
-    padding: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 40px;
 }
 
-.contact-wrapper .contact-info {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-}
-
-.contact-wrapper .contact-info h3 {
-    text-align: center !important;
-}
-
-.contact-wrapper .contact-info p {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.contact-wrapper .info-list {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-}
-
-.contact-wrapper .info-item {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: fit-content !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    gap: 16px;
-    text-align: center !important;
-}
-
-.contact-wrapper .info-item i {
-    width: 20px;
+.contact-info {
+    width: 100%;
+    max-width: 650px;
     text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+    margin: 0 auto 32px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Contact Links */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    width: 420px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.info-item i {
+    width: 24px;
+    min-width: 24px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.info-item span {
+    text-align: left;
 }
 
 a.info-item:hover {
     color: var(--text-primary);
+    transform: translateX(4px);
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    .contact-wrapper {
+        padding: 40px 20px;
+    }
+
+    .info-item {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
 }
 /* Footer */
 .footer {
