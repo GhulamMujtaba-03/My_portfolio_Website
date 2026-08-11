@@ -690,18 +690,20 @@ a {
 /* Contact Section */
 .contact-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px;
 }
 
 .contact-info {
+    width: 100%;
     text-align: center;
 }
 
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .contact-info p {
@@ -715,6 +717,7 @@ a {
     flex-direction: column;
     gap: 16px;
     align-items: center;
+    justify-content: center;
 }
 
 .info-item {
@@ -725,12 +728,14 @@ a {
     color: var(--text-secondary);
     font-size: 0.95rem;
     transition: var(--transition-fast);
+    text-align: center;
 }
 
 .info-item i {
     width: 20px;
     color: var(--accent-blue);
     font-size: 1.1rem;
+    text-align: center;
 }
 
 a.info-item:hover {
